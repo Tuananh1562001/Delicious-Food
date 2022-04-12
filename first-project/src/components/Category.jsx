@@ -5,19 +5,19 @@ import './category.css'
 function Category() {
    return (
      <div className='List'>
-         <NavLink to={'/cuisine/Italian'}>
+         <NavLink to={'/cuisine/Italian'} className="Slink">
              <FaPizzaSlice />
              <h4>Italian</h4>
          </NavLink>
-         <NavLink to={'/cuisine/American'}>
+         <NavLink to={'/cuisine/American'} className="Slink">
              <FaHamburger />
              <h4>American</h4>
          </NavLink>
-         <NavLink to={'/cuisine/VietNamese'}>
+         <NavLink to={'/cuisine/VietNamese'} className="Slink">
              <GiNoodles />
              <h4>VietNamese</h4>
          </NavLink>
-         <NavLink to={'/cuisine/Japanese'}>
+         <NavLink to={'/cuisine/Japanese'} className="Slink">
              <GiSushis />
              <h4>Japanese</h4>
          </NavLink>
