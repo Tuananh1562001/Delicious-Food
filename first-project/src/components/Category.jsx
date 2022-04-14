@@ -5,7 +5,7 @@ import './category.css'
 function Category() {
    return (
      <div className='List'>
-         <NavLink to={'/cuisine/Italian'} className="Slink">
+         <NavLink to={'/cuisine/Italian'} className={({isActive}) => (isActive ? 'Slink active' : 'Slink')}>
              <FaPizzaSlice />
              <h4>Italian</h4>
          </NavLink>
