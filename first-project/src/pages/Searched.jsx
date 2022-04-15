@@ -1,19 +1,32 @@
 import React from 'react'
 import {useState, useEffect} from "react"
+import { useParams } from "react-router-dom"
+import './cuisine.css'
 
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([])
+  let params = useParams()
+  // console.log(params)
 
   const getSearched = async (name) => {
     const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`)
     const recipes = await data.json()
-    searchedRecipes(recipes.results)
+    setSearchedRecipes(recipes.results)
 }
   useEffect(() => {
-    getSearched()
-  }, [])
+    getSearched(params.search)
+  }, [params.search])
   return (
-    <div>Searched</div>
+    <div className='grid'>
+      {searchedRecipes.map((item) => {
+        return(
+          <div className='grid_card' key={item.id}>
+            <img src={item.image} alt=''/>
+            <h4>{item.title}</h4>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
