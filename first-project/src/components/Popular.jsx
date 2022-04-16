@@ -40,8 +40,10 @@ function Popular() {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="card" >
+                  <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
-                    <img src={recipe.image} alt={recipe.title} />
+                    <img className="card__img" src={recipe.image} alt={recipe.title} />
+                  </Link>
                 </div>
               </SplideSlide>
             );
