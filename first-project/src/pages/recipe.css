@@ -3,19 +3,12 @@
     margin-bottom: 5rem;
     display: flex;
 }
-.wrapper_left{
-    width: 60%;
-    height: 100%;
-}
-.wrapper_left_img{
-    height: 300px;
-}
 h2 {
     margin-bottom: 2rem;
 }
 li {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
 }
 ul {
     margin-top: 2rem;

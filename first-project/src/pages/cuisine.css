@@ -3,14 +3,14 @@
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 3rem;
 }
-.grid_card > img{
+img{
     width: 100%;
     border-radius: 2rem;
 }
 .grid_card > a {
     text-decoration: none;
 }
-.grid_card > h4{
+ h4{
     text-align: center;
     padding: 1rem;
 }
